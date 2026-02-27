@@ -1,6 +1,8 @@
 tree-sitter-dockerfile
 ===========================
 
+WIP: fix broken grammar, wait for 6 month
+
 Dockerfile grammar for [tree-sitter][].
 
 [tree-sitter]: https://github.com/tree-sitter/tree-sitter
