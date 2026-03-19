@@ -1898,7 +1898,7 @@
     },
     "comment": {
       "type": "PATTERN",
-      "value": "#.*"
+      "value": "#.*(\\r?\\n)?"
     }
   },
   "extras": [
@@ -1940,5 +1940,6 @@
     }
   ],
   "inline": [],
-  "supertypes": []
+  "supertypes": [],
+  "reserved": {}
 }
