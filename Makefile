@@ -86,6 +86,9 @@ $(LANGUAGE_NAME).pc: bindings/c/$(LANGUAGE_NAME).pc.in
 $(PARSER): $(SRC_DIR)/grammar.json
 	$(TS) generate --no-bindings $^
 
+gen: $(SRC_DIR)/grammar.json
+	$(TS) generate
+
 install: all
 	install -d '$(DESTDIR)$(INCLUDEDIR)'/tree_sitter '$(DESTDIR)$(PCLIBDIR)' '$(DESTDIR)$(LIBDIR)'
 	install -m644 bindings/c/$(LANGUAGE_NAME).h '$(DESTDIR)$(INCLUDEDIR)'/tree_sitter/$(LANGUAGE_NAME).h
@@ -109,4 +112,4 @@ clean:
 test:
 	$(TS) test
 
-.PHONY: all install uninstall clean test
+.PHONY: all install uninstall clean test gen
