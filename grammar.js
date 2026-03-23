@@ -147,21 +147,24 @@ module.exports = grammar({
     workdir_instruction: ($) =>
       seq(alias(/[wW][oO][rR][kK][dD][iI][rR]/, "WORKDIR"), $.path),
 
-    arg_instruction: ($) =>
+      arg_instruction: ($) =>
       seq(
-        alias(/[aA][rR][gG]/, "ARG"),
-        field("name", alias(/[a-zA-Z0-9_]+/, $.unquoted_string)),
-        optional(
-          seq(
-            token.immediate("="),
-            field("default",
-                  choice(
-                    $.double_quoted_string,
-                    $.single_quoted_string,
-                    $.unquoted_string
-                  ))
+          alias(/[aA][rR][gG]/, "ARG"),
+          repeat1(
+              seq(field("name", alias(/[a-zA-Z0-9_]+/, $.unquoted_string)),
+                  optional(
+                      seq(
+                          token.immediate("="),
+                          field("default",
+                                choice(
+                                    $.double_quoted_string,
+                                    $.single_quoted_string,
+                                    $.unquoted_string
+                                ))
+                      )
+                  )
+                 )
           )
-        )
       ),
 
     onbuild_instruction: ($) =>

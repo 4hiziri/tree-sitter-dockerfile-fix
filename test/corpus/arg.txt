@@ -11,6 +11,19 @@ ARG test
 		name: (unquoted_string)))
 
 ==================
+Multi ARG
+==================
+
+ARG test1 test2
+
+---
+
+(source_file
+	(arg_instruction
+		name: (unquoted_string)
+        name: (unquoted_string)))
+
+==================
 With default
 ==================
 
@@ -22,7 +35,7 @@ ARG foo=bar
 	(arg_instruction
 		name: (unquoted_string)
 		default: (unquoted_string)))
-		
+
 
 ==================
 With quoted default
@@ -36,5 +49,31 @@ ARG foo="bar"
 	(arg_instruction
 		name: (unquoted_string)
 		default: (double_quoted_string)))
-		
 
+==================
+Multi ARG with default
+==================
+
+ARG test1 test2="test2" test3=test3 test4
+
+---
+
+(source_file
+	(arg_instruction
+		name: (unquoted_string)
+        name: (unquoted_string)
+        default: (double_quoted_string)
+        name: (unquoted_string)
+        default: (unquoted_string)
+        name: (unquoted_string)))
+
+==================
+ARG non value, Error
+==================
+
+ARG
+
+---
+
+(source_file
+    (ERROR))
