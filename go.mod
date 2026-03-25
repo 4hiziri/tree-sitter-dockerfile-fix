@@ -1,4 +1,4 @@
-module github.com/4hiziri/tree-sitter-dockerfile
+module github.com/4hiziri/tree-sitter-dockerfile-fix
 
 go 1.23
 

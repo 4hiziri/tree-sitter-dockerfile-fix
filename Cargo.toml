@@ -1,11 +1,11 @@
 [package]
 name = "tree-sitter-dockerfile"
 description = "dockerfile grammar for the tree-sitter parsing library"
-version = "0.2.0"
+version = "0.4.1"
 keywords = ["incremental", "parsing", "dockerfile"]
 categories = ["parsing", "text-editors"]
-repository = "https://github.com/camdencheek/tree-sitter-dockerfile"
-edition = "2018"
+repository = "https://github.com/4hiziri/tree-sitter-dockerfile-fix"
+edition = "2026"
 license = "MIT"
 
 build = "bindings/rust/build.rs"
