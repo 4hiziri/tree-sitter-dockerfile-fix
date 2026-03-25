@@ -1,4 +1,4 @@
-module.exports = grammar({
+export default grammar({
   name: "dockerfile",
 
   extras: ($) => [/\s+/, $.line_continuation, $.comment],
