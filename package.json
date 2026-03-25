@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-dockerfile",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "description": "A tree-sitter module for the Dockerfile grammar",
   "main": "bindings/node",
   "types": "bindings/node",
@@ -9,7 +9,7 @@
     "install": "node-gyp-build",
     "prebuildify": "prebuildify --napi --strip"
   },
-  "author": "Camden Cheek <camden@ccheek.com>",
+  "author": "hiziri <meirvg+dev@gmail.com",
   "license": "ISC",
   "dependencies": {
     "node-addon-api": "^7.1.0",

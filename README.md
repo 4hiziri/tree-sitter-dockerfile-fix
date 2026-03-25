@@ -1,6 +1,11 @@
 tree-sitter-dockerfile
 ===========================
 
+Modifierd by hiziri (c) 2026
+Thanks original developer Camden Cheek.
+
+----------------------------
+
 WIP: fix broken grammar, wait for 6 month
 
 Dockerfile grammar for [tree-sitter][].
